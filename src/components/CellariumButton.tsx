@@ -8,6 +8,7 @@ export interface CellariumButtonProps extends TouchableOpacityProps {
 const CellariumButton: React.FC<CellariumButtonProps> = ({label, ...props}) => {
   return (
     <TouchableOpacity {...props}>
+      <Text>CellariumButton</Text>
       <Text>{label}</Text>
     </TouchableOpacity>
   );

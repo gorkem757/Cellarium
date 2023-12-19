@@ -1,15 +1,28 @@
-import React from 'react';
-import {Text, TouchableOpacity, TouchableOpacityProps} from 'react-native';
+// src/components/CellariumButton.tsx
 
-export interface CellariumButtonProps extends TouchableOpacityProps {
+import React from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from 'react-native';
+
+interface CellariumButtonProps extends TouchableOpacityProps {
+  onPress: () => void;
   label: string;
 }
 
-const CellariumButton: React.FC<CellariumButtonProps> = ({label, ...props}) => {
+const CellariumButton: React.FC<CellariumButtonProps> = ({
+  onPress,
+  label,
+  ...props
+}) => {
   return (
-    <TouchableOpacity {...props}>
-      <Text>CellariumButton</Text>
-      <Text>{label}</Text>
+    <TouchableOpacity onPress={onPress} {...props}>
+      <View style={{padding: 10, backgroundColor: 'blue', borderRadius: 5}}>
+        <Text style={{color: 'white'}}>{label}</Text>
+      </View>
     </TouchableOpacity>
   );
 };

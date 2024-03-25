@@ -67,7 +67,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
     }, [isExpanded, icons]);
 
     return (
-        <View style={(styles.container, containerStyle)}>
+        <View style={[styles.container, containerStyle]}>
             <TouchableOpacity
                 onPress={toggleAccordion}
                 style={[styles.header, titleContainerStyle]}>
@@ -90,6 +90,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 
 const styles = StyleSheet.create({
     container: {
+        width: '100%',
         borderWidth: 1,
         borderColor: '#ccc',
         borderRadius: 8,

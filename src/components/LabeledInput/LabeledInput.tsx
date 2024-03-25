@@ -20,8 +20,8 @@ const FOCUS_COLOR = '#161c20';
 const BLUR_COLOR = 'gray';
 const FOCUS_WIDTH = 1.2;
 const BLUR_WIDTH = 1;
-const FOCUS_HEIGHT = 60;
-const EMPTY_HEIGHT = 40;
+const FOCUS_HEIGHT = 50;
+const EMPTY_HEIGHT = 50;
 
 interface Props extends TextInputProps {
     label: string;
@@ -85,7 +85,7 @@ const LabeledInput: React.FC<Props> = ({
 
     const dynamicInputStyle: TextStyle = {
         minHeight: isFocused ? FOCUS_HEIGHT : value ? FOCUS_HEIGHT : EMPTY_HEIGHT,
-        textAlignVertical: 'top',
+        textAlignVertical: 'center',
         textAlign: 'left',
         borderColor: isFocused ? FOCUS_COLOR : BLUR_COLOR,
         borderWidth: isFocused ? FOCUS_WIDTH : BLUR_WIDTH,
@@ -95,7 +95,8 @@ const LabeledInput: React.FC<Props> = ({
     const dynamicLabelStyle: StyleProp<TextStyle> = {
         transform: [{ translateX }, { translateY }],
         color: isFocused ? FOCUS_COLOR : BLUR_COLOR,
-        backgroundColor: labelStyle?.backgroundColor ?? 'white',
+        backgroundColor: labelStyle?.backgroundColor ?? undefined,
+        fontWeight: isFocused ? 'bold' : 'normal'
     };
 
     return (
@@ -128,11 +129,13 @@ const LabeledInput: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
     container: {
+        width: '100%',
         marginHorizontal: 16
     },
     input: {
         borderRadius: 16,
         paddingLeft: 14,
+        width: '100%',
     },
     label: {
         position: 'absolute',

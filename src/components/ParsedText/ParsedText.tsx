@@ -47,7 +47,8 @@ const ParsedText: React.FC<ParsedTextProps> = ({ parsePatterns = [], children, .
         return template.split(/(\{\d+\})/).map((part, index) => {
             const match = part.match(/\{(\d+)\}/);
             if (match) {
-                const replacementIndex = parseInt(match[0], 10);
+                // @ts-ignore
+                const replacementIndex = parseInt(match[1], 10);
                 return replacements[replacementIndex] !== undefined ? (replacements[replacementIndex]) : <></>;
             }
             return <Text {...otherProps} key={index}>{part}</Text>;

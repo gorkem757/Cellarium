@@ -32,6 +32,7 @@ const SectionCard: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
     container: {
+        width: '100%',
         paddingHorizontal: 16,
         borderRadius: 12,
         paddingVertical: 22,

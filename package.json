@@ -1,6 +1,6 @@
 {
   "name": "cellarium",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React Native components and more...",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -82,6 +82,9 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
+    "react-native-fast-image": "^8.6.3"
+  },
+  "dependencies": {
     "react-native-fast-image": "^8.6.3"
   },
   "workspaces": [

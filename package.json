@@ -1,6 +1,6 @@
 {
   "name": "cellarium",
-  "version": "0.1.3.1",
+  "version": "0.1.4",
   "description": "React Native components and more...",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

@@ -6,4 +6,7 @@ export { default as CellariumSectionCard } from './components/SectionCard/Sectio
 export { default as CellariumText } from './components/Text/Text';
 export { default as CellariumSwitch } from './components/Switch/Switch';
 export { default as CellariumAccordion } from './components/Accordion/Accordion';
+export { default as CellariumCheckbox } from './components/Checkbox/Checkbox';
+export { default as CellariumImage } from './components/Image/Image';
+export { default as CellariumProgressiveImage } from './components/ProgressiveImage/ProgressiveImage';
 export * from './components/InAppMessage/InAppMessage';
